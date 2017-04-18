@@ -36,7 +36,7 @@ public void recordScores(int s1, int s2, int s3)
 public int overallScore()
 {
    int s;
-   if (score1 < score2)
+   if (score1 > score2)
       s = score2;
    else
       s = score1;
@@ -61,6 +61,10 @@ public static void main(String args[])
       System.err.println("Error: arguments must be integers!");
       return;
    }
+	if (s1<0 || s1>50 || s2<0 || s2>50 || s3<0 || s3>50) {
+		System.err.println("Error: scores must be between 0 and 50!");
+		return;
+	}
    IglooScore1 score = new IglooScore1();
    score.recordScores(s1,s2,s3);
    System.out.println("Overall score: " + score.overallScore());

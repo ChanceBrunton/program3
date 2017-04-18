@@ -1,0 +1,13 @@
+IglooScore1.java:
+Line 39:
+	'>' sign needed to be '<'
+Line 64:
+	Added checking for values out of range.
+
+IglooScore2.java:
+Line 44:
+	s2 was assigned to score2, it should be score3.
+Lines 39,42,45,48:
+	Else case returns an invalid answer, the above conditionals
+	should be '>=' and '<=' as appropriate, in which case the
+	else condition is never reached and can be deleted.
